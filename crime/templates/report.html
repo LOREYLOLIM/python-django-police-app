@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div col="col-12">
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{form|crispy}}
+          <input type="submit" class="btn btn-outline-primary" value="Report">
+        </form>
+        <br>
+        <br>
+        <div>
+        <a href="{% url 'home' %}" class="btn smoothscroll btn-primary mr-10 mb-10" style="float:left">Main Page</a>
+    </div>
+        {% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+<div class="container">
+    <!-- {% if user.is_authenticated %}
+
+    <h3>welcome {{user.username}}</h3>
+
+    {% endif %} -->
+    <div class="row align-items-center justify-content-center">
+    <div class="col-md-15 mt-lg-2 text-center">
+        <h3 class="text-uppercase" data-aos="fade-up" style="color:rgb(17, 1, 238); font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold;"><marquee>WELCOME TO CRIME REPORT APP</marquee></h3>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <a href="{% url 'report' %}" class="btn smoothscroll btn-primary mr-10 mb-10">Report Case</a>
+          <a href="{% url 'police' %}" class="btn smoothscroll btn-primary mr-10 mb-2">Police Records</a>
+
+        </div>
+      </div>    
+    </div>
+  </div>
+{% endblock content %}
